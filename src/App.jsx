@@ -8,7 +8,7 @@ function App() {
   const toggle = () => setOpen(!isOpen);
 
   return (
-    <div div className='w-full overflow-hidden ' >
+    <div div className='w-full overflow-hidden  ' >
       <Navbar toggle={toggle} />
       <Dropdown isOpen={isOpen} toggle={toggle} />
 
@@ -23,5 +23,4 @@ function App() {
     </div>
   );
 }
-
 export default App;
