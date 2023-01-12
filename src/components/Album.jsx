@@ -1,26 +1,25 @@
 import React, { useState } from 'react';
-import Slider from './Slider';
+import { useParams } from 'react-router-dom';
+import { Data } from '../constant';
+import Images from './Images';
+import { useMemo } from 'react';
+import { useEffect } from 'react';
 
-export default function Album({ photo }) {
-    const [isDataSlide, setDataSlide] = useState();
-    const modal = (index) => setDataSlide(index);
-    const [hide, setHide] = useState(true);
-    const hideSlide = () => setHide(prev => !prev);
+export default function Album() {
+    const { id } = useParams()
+    const li = Data.filter(x => x.id === id)
+
+    const [useImage, setImage] = useState(li)
 
 
-    return hide ? (
-        <div className="grid md:grid-cols-3 items-center justify-center md:px-16 mb-10">
-            {photo.map((item, index) => {
-                return (
-                    <div key={index} onClick={hideSlide}>
-                        <img key={item.id} className="md:object-cover object-cover h-96 w-full md:p-2" src={item} alt="cover"
-                            onClick={() => modal(index)}
-                        />
-                    </div>
-                );
-            })}
-        </div>
-    ) : (
-        <Slider key={photo.id} dataSlider={isDataSlide} data={photo} close={hideSlide} />
-    );
+    console.log(useImage)
+
+    return (
+        <>
+            {li.map((item) => (
+                <Images key={item.id} photo={item.photo} id={item.id} />
+            ))}
+        </>
+
+    )
 }

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Contact, Gallery, Home } from './pages';
-import { Dropdown, Footer, Navbar } from './components';
+import { Album, Dropdown, Footer, Navbar } from './components';
 import { Routes, Route } from 'react-router-dom';
 
 function App() {
@@ -8,14 +8,16 @@ function App() {
   const toggle = () => setOpen(!isOpen);
 
   return (
-    <div className='w-full overflow-hidden '>
+    <div div className='w-full overflow-hidden ' >
       <Navbar toggle={toggle} />
       <Dropdown isOpen={isOpen} toggle={toggle} />
 
       <Routes>
-        <Route path="/" index element={<Home />} />
-        <Route path="/Gallery" element={<Gallery />} />
-        <Route path="/Contact" element={<Contact />} />
+        <Route path="/" index element={<Home />} exact />
+        <Route path="/Gallery" element={<Gallery />} exact />
+        <Route path="/Contact" element={<Contact />} exact />
+        <Route path="/album/:id" element={<Album />} exact />
+        <Route path="/images/:id" element={<Album />} exact />
       </Routes>
       <Footer />
     </div>
