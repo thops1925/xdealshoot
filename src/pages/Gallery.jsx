@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { Album, Card } from '../components';
+import React from 'react';
+import { Card } from '../components';
 import { Data } from '../constant';
 import { Link } from 'react-router-dom';
 

@@ -1,12 +1,17 @@
 import React, { useState } from 'react'
+import SelectedImage from './SelectedImage'
 
-const Images = ({ photo, id }) => (
-    <div className="grid md:grid-cols-3 items-center justify-center md:px-16 mb-10">
-        {photo.map((item, index) => (
-            <img key={index} src={item} alt="cover" className="md:object-cover object-cover h-96 w-full md:p-2" />
-        ))}
-    </div>
-)
+const Images = ({ photo }) => {
+
+    return (
+        <div className="grid md:grid-cols-3 items-center justify-center md:px-16 mb-10" >
+            {photo.map((item, index) => (
+                <SelectedImage item={item} key={index} idx={index} />
+            ))}
+        </div >
+
+    )
+}
 
 
 export default Images
