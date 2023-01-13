@@ -6,7 +6,7 @@ const Images = ({ photo, id }) => {
     const [open, close] = useState(true)
     const [xid, setXid] = useState()
 
-    console.log(xid)
+    console.log(open)
 
 
     return open ? (
@@ -20,7 +20,7 @@ const Images = ({ photo, id }) => {
         </div >
     ) : (
         <div>
-            <Slider data={photo} dataSlider={xid} close={!open} />
+            <Slider data={photo} dataSlider={xid} close={close} />
         </div>
     )
 }
