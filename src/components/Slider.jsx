@@ -3,12 +3,12 @@ import React, { useEffect, useState } from 'react';
 import { AiOutlineClose, AiOutlineLeft, AiOutlineRight } from 'react-icons/ai';
 
 export default function Slider({ dataSlider, data, close }) {
-    const [isSlider, setSlider] = useState(0);
+    const [isSlider, setSlider] = useState(dataSlider);
     console.log(isSlider)
 
-    useEffect(() => {
-        setSlider(dataSlider);
-    }, [dataSlider]);
+    // useEffect(() => {
+    //     setSlider(dataSlider);
+    // }, [dataSlider]);
 
 
     const rightArrow = () => {
