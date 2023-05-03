@@ -11,6 +11,7 @@ export default function Gallery() {
                 {Data.map((item) => (
                     <Link to={`/album/${item.id}`} key={item.id} >
                         <Card
+                            key={item.id}
                             id={item.id}
                             title={item.title}
                             photo={item.photo}

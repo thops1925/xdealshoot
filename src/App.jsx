@@ -11,7 +11,6 @@ function App() {
     <div div className='w-full overflow-hidden' >
       <Navbar toggle={toggle} />
       <Dropdown isOpen={isOpen} toggle={toggle} />
-
       <Routes>
         <Route path="/" index element={<Home />} exact />
         <Route path="/Gallery" element={<Gallery />} exact />
