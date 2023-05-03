@@ -5,7 +5,7 @@ import GitHubIcon from '@mui/icons-material/GitHub';
 
 export default function Footer() {
     return (
-        <footer className="flex justify-center items-center flex-col  h-64 bg-gray-900 text-gray-400  ">
+        <footer className="flex justify-center items-center flex-col h-64 bg-gray-900 text-gray-400  ">
             <div className="mb-3">
                 <a alt='fb' href='https://www.facebook.com/thops.lumen/'>
                     <FacebookRoundedIcon className="text-gray-400 hover:text-gray-500 mx-3" />

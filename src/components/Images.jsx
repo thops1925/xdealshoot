@@ -14,7 +14,7 @@ const Images = ({ photo }) => {
             ))}
         </div >
     ) : (
-        <div>
+        <div className='my-4'>
             <Slider data={photo} dataSlider={xid} close={close} />
         </div>
     )
