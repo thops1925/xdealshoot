@@ -3,9 +3,9 @@ import SelectedImage from './SelectedImage'
 import Slider from './Slider'
 
 const Images = ({ photo }) => {
-    const [open, close] = useState(false)
+    const [open, close] = useState(true)
     const [xid, setXid] = useState()
-    return !open ? (
+    return open ? (
         <div className="grid md:grid-cols-3 mx-4 items-center justify-center md:px-16 mb-10" onClick={() => close(!open)} >
             {photo.map((item, index) => (
                 <div onClick={() => setXid(index)}>
