@@ -3,12 +3,10 @@ import { Link } from 'react-router-dom';
 
 export default function NavBar({ toggle }) {
     return (
-        <nav className="flex px-4 sticky z-20 top-0 pt-2 justify-between  md:justify-center md:items-center  h-[70px] bg-white text-black  mx-90 shadow-sm font-mono "
-        >
+        <nav className="flex px-4 sticky z-20 top-0 pt-2 justify-between  md:justify-center md:items-center  h-[70px] bg-white text-black  mx-90 shadow-sm font-mono">
             <Link to="/" className="h-12 w-12 rounded-full text-s bg-slate-900 text-gray-200 flex select-none border-4 border-red-900 justify-center  items-center overflow-hidden  justify md:ml-32 box-content">
                 Thopz
             </Link>
-
             <div className="px-4 cursor-pointer md:hidden">
                 <svg
                     onClick={toggle}
