@@ -16,9 +16,6 @@ export default function Dropdown({ toggle, isOpen }) {
             <Link className="p-4" to="/Contact">
                 Contact
             </Link>
-            {/* <Link className="p-4" to="/About">
-        About
-      </Link> */}
         </div>
     );
 }

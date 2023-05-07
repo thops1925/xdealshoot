@@ -12,7 +12,7 @@ const Images = ({ photo }) => {
                     <SelectedImage item={item} key={index} />
                 </div>
             ))}
-        </div >
+        </div>
     ) : (
         <div className='my-4'>
             <Slider data={photo} dataSlider={xid} close={close} />

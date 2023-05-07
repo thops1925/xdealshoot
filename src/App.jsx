@@ -8,7 +8,7 @@ function App() {
   const toggle = () => setOpen(!isOpen);
 
   return (
-    <div div className='w-full overflow-hidden  bg-slate-50 --tw-gradient-from: inherit var(--tw-gradient-from-position)' >
+    <div div className='w-full overflow-hidden bg-gradient-to-l from-slate-50 to-transparent' >
       <Navbar toggle={toggle} />
       <Dropdown isOpen={isOpen} toggle={toggle} />
       <Routes>

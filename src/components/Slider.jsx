@@ -12,10 +12,7 @@ export default function Slider({ dataSlider, data, close }) {
     const leftArrow = () => {
         const prevIndex = isSlider - 1 < 0 ? data.length - 1 : isSlider - 1
         setSlider(prevIndex)
-
     };
-
-
     return (
         <div className="mx-auto flex justify-center items-center">
             <div className="relative flex items-center justify-center mx-2">

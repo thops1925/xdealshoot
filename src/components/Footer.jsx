@@ -16,7 +16,6 @@ export default function Footer() {
                 <a alt='gh' href='https://github.com/thops1925'>
                     <GitHubIcon className="text-gray-400 hover:text-gray-500 mx-3" />
                 </a>
-
             </div>
             <p className="flex text-sm">
                 &copy;2021 ThopsImagery. All right reserved
