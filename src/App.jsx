@@ -8,18 +8,19 @@ function App() {
   const toggle = () => setOpen(!isOpen);
 
   return (
-    <div div className='w-full overflow-hidden bg-gradient-to-l from-slate-50 to-transparent' >
+    <div className='w-full overflow-hidden bg-gradient-to-l from-slate-50 to-transparent' >
       <Navbar toggle={toggle} />
       <Dropdown isOpen={isOpen} toggle={toggle} />
       <Routes>
-        <Route path="/" index element={<Home />} exact />
-        <Route path="/Gallery" element={<Gallery />} exact />
-        <Route path="/Contact" element={<Contact />} exact />
-        <Route path="/album/:id" element={<Album />} exact />
-        <Route path="/images/:id" element={<Album />} exact />
+        <Route path="/" element={<Home />} />
+        <Route path="/Gallery" element={<Gallery />} />
+        <Route path="/Contact" element={<Contact />} />
+        <Route path="/album/:id" element={<Album />} />
+        <Route path="/images/:id" element={<Album />} />
       </Routes>
       <Footer />
     </div>
   );
 }
+
 export default App;
