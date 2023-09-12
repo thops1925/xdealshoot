@@ -16,7 +16,8 @@ function Card({ id, title, photo }) {
                     </div>
             </div>
             <img src={photo[2]}
-                alt="icons" className="w-full h-98 rounded overflow-hidden object-cover" />
+                alt="icons" 
+                className="w-full h-98 rounded overflow-hidden object-cover" />
         </div>
     );
 }
